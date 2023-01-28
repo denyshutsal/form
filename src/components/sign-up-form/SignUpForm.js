@@ -18,7 +18,7 @@ export default function Form() {
   }
 
   function handleSubmit(event) {
-    event.preventDefaults();
+    event.preventDefault();
     if (formData.password === formData.passwordConfirm) {
       console.log("Successfully signed up");
     } else {
@@ -37,7 +37,7 @@ export default function Form() {
         <input
           type="email"
           placeholder="Email address"
-          className="form--input"
+          className="form__input"
           name="email"
           onChange={handleChange}
           value={formData.email}
@@ -45,7 +45,7 @@ export default function Form() {
         <input
           type="password"
           placeholder="Password"
-          className="form--input"
+          className="form__input"
           name="password"
           onChange={handleChange}
           value={formData.password}
@@ -53,13 +53,13 @@ export default function Form() {
         <input
           type="password"
           placeholder="Confirm password"
-          className="form--input"
+          className="form__input"
           name="passwordConfirm"
           onChange={handleChange}
           value={formData.passwordConfirm}
         />
 
-        <div className="form--marketing">
+        <div className="form__marketing">
           <input
             id="okayToEmail"
             type="checkbox"
@@ -69,7 +69,7 @@ export default function Form() {
           />
           <label htmlFor="okayToEmail">I want to join the newsletter</label>
         </div>
-        <button className="form--submit">Sign up</button>
+        <button className="form__submit">Sign up</button>
       </form>
     </div>
   );
